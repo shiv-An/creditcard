@@ -28,13 +28,15 @@ class CreditCardDetails extends React.Component {
     }
 
     validate = () => {
+
+        let regx = /[7-9]\d{9}/;
+        let regx1 = /^([a-zA-Z0-9\.-]+)@([a-zA-Z0-9-]+).([a-z]{2,20})$/;
         
-        if(!this.state.emailID.includes('@')) {
+        if(!regx1.test(this.state.emailID)) {
             this.setstate({emailError: 'Invalid Email ID'})
-            return false;
         }
 
-        if(this.state.mobileNumber.length < 10  ){
+        if(!regx.test(this.state.mobileNumber)){
             this.setState({mobileError:'Invalid Mobile Number'})
         }
 
