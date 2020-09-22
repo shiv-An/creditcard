@@ -1,5 +1,5 @@
 # creditcard
 
-### Create React app and replace the src folder with index.js & components folder
+### Create React app and paste index.js & components folder inside the src folder
 
 
